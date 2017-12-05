@@ -62,7 +62,7 @@ namespace ForLoop
             if (!Char.IsNumber(e.KeyChar) && !e.KeyChar.Equals((Char)Keys.Back))
             {
                 errorProvider1.SetError(txtNhap, "Vui lòng nhập đúng số");
-                e.Handled = true;
+                e.Handled = false;
             }
         }
     }
