@@ -55,13 +55,14 @@ namespace ForLoop
         private void txtNhap_KeyPress(object sender, KeyPressEventArgs e)
         {
             errorProvider1.Clear();
+
             //e.KeyChar != (Char)8 : khác backspace
             //if (!Char.IsNumber(e.KeyChar) && !e.KeyChar.Equals((Char)8))
             //Nhập nhanh giữa số và chữ sẽ xóa số??????????????????????????
             if (!Char.IsNumber(e.KeyChar) && !e.KeyChar.Equals((Char)Keys.Back))
             {
                 errorProvider1.SetError(txtNhap, "Vui lòng nhập đúng số");
-                e.Handled = true;
+                e.Handled = false;
             }
         }
     }
